@@ -41,7 +41,8 @@ def inv(A, *, out=None):
 )
 def pinv(input, *, atol=None, rtol=None, hermitian=False, out=None):
     # TODO: add handling for hermitian
-    if atol is None:
+
+    if hermitian is None:
         return ivy.pinv(input, rtol=rtol, out=out)
     else:
         sigma = ivy.svdvals(input)[0]
