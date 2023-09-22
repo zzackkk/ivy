@@ -40,7 +40,7 @@ def inv(A, *, out=None):
     {"2.0.1 and below": ("float32", "float64", "complex32", "complex64")}, "torch"
 )
 def pinv(input, *, atol=None, rtol=None, hermitian=False, out=None):
-    # TODO: add handling for hermitian
+     # TODO: add handling for hermitian
 
     if hermitian is None:
         return ivy.pinv(input, rtol=rtol, out=out)
